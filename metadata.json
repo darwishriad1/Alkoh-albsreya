@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Brigade 43 Giants Personnel System",
+  "description": "Offline-capable web application for managing military personnel, attendance, leave tracking, and official reporting for Brigade 43.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
