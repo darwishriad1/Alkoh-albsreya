@@ -3,7 +3,7 @@ name: Build Android APK
 on:
   push:
     branches: [ main, master ]
-  workflow_dispatch: # يتيح لك تشغيل البناء يدوياً من الجوال
+  workflow_dispatch:
 
 jobs:
   build:
@@ -16,10 +16,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install @tailwindcss/oxide-linux-x64-gnu --js-flags="--max-old-space-size=4096"
 
       - name: Build Web App
         run: npm run build
